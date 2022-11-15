@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(0, 239, 146);
+    background: linear-gradient(90deg, rgba(0, 239, 146, 1) 0%, rgba(0, 163, 247, 1) 100%);
+    font-family: "Roboto Condensed", sans-serif;
+    height: 100vh;
+    color: #43686b;
+}
+
+.navbar {
+    height: 60px;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    margin-left: 40px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #00a3f7
+}
+
+.navbar-brand:hover {
+    color: #00ef92;
+}
+
+.searchbox {
+    margin-right: 40px;
+}
+
+#pokemonName {
+    border-radius: 5px;
+}
+
+#pokemonName::placeholder {
+    opacity: 0.3;
+}
+
+#search {
+    border-radius: 5px;
+    background-color: #00a3f7;
+    color: #fff;
+}
+
+#search:hover {
+    background-color: #00ef92;
+}
+
+#start {
+    height: 50vh;
+    width: 70%;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: block;
+    text-align: center;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#start img {
+    height: 40%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#start h2 {
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-rows: 100px 500px;
+    grid-auto-columns: minmax(150, auto);
+    padding: 20px;
+    margin: 40px 30px;
+}
+
+.section {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.description {
+    grid-column: 2 / -1;
+}
+
+.name,
+.type,
+.number {
+    display: flex;
+    align-items: center;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+img {
+    padding: 10px;
+}
+
+p {
+    font-size: 20px;
+    padding: 30px;
+    text-align: justify;
+}
