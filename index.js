@@ -27,26 +27,19 @@ function getPokemon(e) {
         .then((response) => response.json())
         .then((data) => {
             document.querySelector(".pokemonBox").innerHTML = `
-        <div class="section name">
-            <h1 class="header">${capitaliseFirstLetter(data.name)}</h1>
-        </div>
-        <div class="section species">
-            <h1 class="header">${(data.types.map((type) => capitaliseFirstLetter(type.type.name)).join(" / "))}</h1>
-        </div>
-        <div class="section number">
-            <h1 class="header">#${data.id}</h1>
-        </div>
         <div class="section image">
             <img src="${data.sprites.other.home.front_default}" alt="${capitaliseFirstLetter(data.name)}">
         </div>
-        <div class="section description">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis est sit amet dui accumsan
-                tempor. Suspendisse potenti. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Donec eu tortor ex. Curabitur pretium purus nisi, eu placerat urna dignissim porttitor.
-                Nam euismod nisi in augue lobortis, id rhoncus mi auctor. Cras molestie elit vitae facilisis porttitor.
-            </p>
+        <div class="section name">
+            <h1 class="header">Name: ${capitaliseFirstLetter(data.name)}</h1>
         </div>
+        <div class="section type">
+            <h1 class="header">Type: ${(data.types.map((type) => capitaliseFirstLetter(type.type.name)).join(" / "))}</h1>
+        </div>
+        <div class="section number">
+            <h1 class="header">Number: #${data.id}</h1>
+        </div>
+
         `;
         }).catch((err) => {
             console.log("Pokemon not found", err);
