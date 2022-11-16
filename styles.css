@@ -94,7 +94,7 @@ body {
 }
 
 .name,
-.type,
+.species,
 .number {
     display: flex;
     align-items: center;
@@ -118,7 +118,8 @@ body {
 }
 
 img {
-    padding: 10px;
+    max-width: 100%;
+    padding: 30px;
 }
 
 p {

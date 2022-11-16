@@ -27,23 +27,18 @@ function getPokemon(e) {
         .then((response) => response.json())
         .then((data) => {
             document.querySelector(".pokemonBox").innerHTML = `
-
         <div class="section name">
             <h1 class="header">${capitaliseFirstLetter(data.name)}</h1>
         </div>
-
-        <div class="section type">
-            <h1 class="header">${capitaliseFirstLetter(data.types[0].type.name)}</h1>
+        <div class="section species">
+            <h1 class="header">${(data.types.map((type) => capitaliseFirstLetter(type.type.name)).join(" / "))}</h1>
         </div>
-
         <div class="section number">
             <h1 class="header">#${data.id}</h1>
         </div>
-
         <div class="section image">
-            <img src="${data.sprites.other['official-artwork'].front_default}" alt="${capitaliseFirstLetter(data.name)}">
+            <img src="${data.sprites.other.home.front_default}" alt="${capitaliseFirstLetter(data.name)}">
         </div>
-
         <div class="section description">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis est sit amet dui accumsan
