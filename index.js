@@ -1,12 +1,29 @@
+///////////////// First page click + enter
+
 document.querySelector("#search").addEventListener("click", getPokemon);
+
+const input = document.getElementById("pokemonName");
+
+input.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("search").click();
+    }
+});
+
+
+/////////remove div
 
 const removeDiv = document.getElementById("start");
 
 document.querySelector("#search").addEventListener('click', () => {
-    if (removeDiv) {
-       removeDiv.remove();
-   }
+    if (removeDiv && (input && input.value)) {
+        removeDiv.remove();
+    }
 });
+
+
+///////////// capitalise and lowercase on search
 
 
 function capitaliseFirstLetter(string) {
@@ -16,6 +33,9 @@ function capitaliseFirstLetter(string) {
 function lowerCaseName(string) {
     return string.toLowerCase();
 }
+
+
+//////////// get pokemon
 
 function getPokemon(e) {
 
