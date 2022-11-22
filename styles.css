@@ -7,7 +7,6 @@ body {
     background: rgb(0, 239, 146);
     background: linear-gradient(90deg, rgba(0, 239, 146, 1) 0%, rgba(0, 163, 247, 1) 100%);
     font-family: "Roboto Condensed", sans-serif;
-    height: 100vh;
     color: #43686b;
 }
 
@@ -64,61 +63,46 @@ body {
 }
 
 #start {
-    height: 50vh;
-    width: 60vw;
+    margin: 170px 300px 0 300px;
     background-color: #fff;
     border-radius: 10px;
-    position: absolute;
-    top: 53%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    display: block;
     text-align: center;
     box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
-    padding: 50px;
+    padding: 60px;
 }
 
 #start img {
-    height: 40%;
-    margin-bottom: 50px;
-    margin-top: 20px;
+    height: 130px;
+    margin: 20px 0;
 }
 
-#start h2 {
-    margin-bottom: 20px;
+#start h2,
+h4 {
+    padding-top: 20px;
 }
 
 
 /* Info page */
 
-.pokemonBox {
+#pokemonBox {
     display: grid;
     grid-template-areas:
         "image name"
         "image type"
         "image number";
     grid-template-columns: 600px 500px;
-    /* grid-template-columns: repeat(2, 1fr); */
     gap: 20px;
-    /* grid-auto-columns: minmax(150, auto); */
     padding: 20px;
-    position: absolute;
-    /* margin: 6em auto; */
-    top: 54%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    justify-content: center;
+    margin-top: 5rem;
+
+
 }
 
 .section {
     background: #fff;
     border-radius: 10px;
 }
-
-/* .description {
-    grid-column: 2 / -1;
-} */
 
 .name {
     grid-area: name;
@@ -140,7 +124,6 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
-    /* grid-column: 2 / -1; */
 }
 
 .header {
@@ -156,17 +139,18 @@ body {
     align-items: center;
     box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
     grid-area: image;
-    /* grid-row: 1 / 2; */
 }
+
+
 
 /* Phone layout */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width:320px) and (max-width:480px) {
 
     /* Homepage */
 
     .navbar {
-        height: 130px;
+        height: 150px;
     }
 
     .navbar-brand {
@@ -188,15 +172,12 @@ body {
     }
 
     #start {
-        height: 400px;
-        width: 250px;
-        margin-top: 50px;
+        margin: 4rem 60px 50px 60px;
+        padding: 30px;
     }
 
     #start img {
-        height: 30%;
-        margin-bottom: 30px;
-        margin-top: 0;
+        height: 80px;
     }
 
     #start h2 {
@@ -207,11 +188,8 @@ body {
         font-size: 16px;
     }
 
-
-    /* Info page */
-
-    .pokemonBox {
-        margin-top: 30px;
+    #pokemonBox {
+        margin: 2rem 0.5rem 0 0.5rem;
         display: grid;
         grid-template-areas:
             "image"
@@ -222,7 +200,7 @@ body {
     }
 
     img {
-        max-width: 80%;
+        max-width: 50%;
     }
 
     h1 {
@@ -230,5 +208,41 @@ body {
         font-size: 25px;
     }
 
+
+}
+
+
+/* Tablet layout */
+
+@media only screen and (min-width:481px) and (max-width:1024px) {
+
+    .navbar {
+        height: 100px;
+    }
+
+    #start {
+        margin: 4rem 60px 50px 60px;
+        padding: 30px;
+    }
+
+    #pokemonBox {
+        margin: 2rem 0.5rem 0 0.5rem;
+        display: grid;
+        grid-template-areas:
+            "image"
+            "name"
+            "type"
+            "number";
+        grid-template-columns: 600px;
+    }
+
+    img {
+        max-width: 80%;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 25px;
+    }
 
 }

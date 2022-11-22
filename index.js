@@ -1,4 +1,4 @@
-///////////////// First page click + enter
+// First page click + enter
 
 document.querySelector("#search").addEventListener("click", getPokemon);
 
@@ -12,7 +12,7 @@ input.addEventListener("keypress", function (event) {
 });
 
 
-/////////remove div
+// Remove start div
 
 const removeDiv = document.getElementById("start");
 
@@ -23,7 +23,7 @@ document.querySelector("#search").addEventListener('click', () => {
 });
 
 
-///////////// capitalise and lowercase on search
+// Capitalise and lowercase on search input
 
 
 function capitaliseFirstLetter(string) {
@@ -35,7 +35,7 @@ function lowerCaseName(string) {
 }
 
 
-//////////// get pokemon
+// Get Pokemon
 
 function getPokemon(e) {
 
@@ -46,7 +46,7 @@ function getPokemon(e) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
         .then((response) => response.json())
         .then((data) => {
-            document.querySelector(".pokemonBox").innerHTML = `
+            document.querySelector("#pokemonBox").innerHTML = `
         <div class="section image">
             <img src="${data.sprites.other.home.front_default}" alt="${capitaliseFirstLetter(data.name)}">
         </div>
@@ -59,6 +59,7 @@ function getPokemon(e) {
         <div class="section number">
             <h1 class="header">Number: #${data.id}</h1>
         </div>
+
 
         `;
         }).catch((err) => {
