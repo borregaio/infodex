@@ -11,6 +11,9 @@ body {
     color: #43686b;
 }
 
+
+/* Homepage */
+
 .navbar {
     height: 60px;
     box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
@@ -62,7 +65,7 @@ body {
 
 #start {
     height: 50vh;
-    width: 70%;
+    width: 60vw;
     background-color: #fff;
     border-radius: 10px;
     position: absolute;
@@ -79,25 +82,29 @@ body {
 #start img {
     height: 40%;
     margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 #start h2 {
     margin-bottom: 20px;
 }
 
+
+/* Info page */
+
 .pokemonBox {
     display: grid;
-    grid-template-areas: 
-    "image name"
-    "image type"
-    "image number";
+    grid-template-areas:
+        "image name"
+        "image type"
+        "image number";
     grid-template-columns: 600px 500px;
     /* grid-template-columns: repeat(2, 1fr); */
     gap: 20px;
     /* grid-auto-columns: minmax(150, auto); */
     padding: 20px;
-    /* margin: 6em auto; */
     position: absolute;
+    /* margin: 6em auto; */
     top: 54%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
@@ -150,4 +157,78 @@ body {
     box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
     grid-area: image;
     /* grid-row: 1 / 2; */
+}
+
+/* Phone layout */
+
+@media only screen and (max-width: 480px) {
+
+    /* Homepage */
+
+    .navbar {
+        height: 130px;
+    }
+
+    .navbar-brand {
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .searchbox {
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    #search {
+        margin-right: 0;
+    }
+
+    #pokemonName {
+        width: 150px;
+    }
+
+    #start {
+        height: 400px;
+        width: 250px;
+        margin-top: 50px;
+    }
+
+    #start img {
+        height: 30%;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+
+    #start h2 {
+        font-size: 20px;
+    }
+
+    #start h4 {
+        font-size: 16px;
+    }
+
+
+    /* Info page */
+
+    .pokemonBox {
+        margin-top: 30px;
+        display: grid;
+        grid-template-areas:
+            "image"
+            "name"
+            "type"
+            "number";
+        grid-template-columns: 300px;
+    }
+
+    img {
+        max-width: 80%;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 25px;
+    }
+
+
 }
