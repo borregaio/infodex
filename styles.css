@@ -150,7 +150,7 @@ h4 {
     /* Homepage */
 
     .navbar {
-        height: 150px;
+        height: 120px;
     }
 
     .navbar-brand {
@@ -172,7 +172,7 @@ h4 {
     }
 
     #start {
-        margin: 4rem 60px 50px 60px;
+        margin: 4rem 60px 4rem 60px;
         padding: 30px;
     }
 
@@ -189,7 +189,7 @@ h4 {
     }
 
     #pokemonBox {
-        margin: 2rem 0.5rem 0 0.5rem;
+        margin: 1rem 0.5rem 1rem 0.5rem;
         display: grid;
         grid-template-areas:
             "image"
@@ -200,7 +200,7 @@ h4 {
     }
 
     img {
-        max-width: 50%;
+        max-width: 80%;
     }
 
     h1 {
@@ -221,12 +221,12 @@ h4 {
     }
 
     #start {
-        margin: 4rem 60px 50px 60px;
+        margin: 4rem 60px 4rem 60px;
         padding: 30px;
     }
 
     #pokemonBox {
-        margin: 2rem 0.5rem 0 0.5rem;
+        margin: 3rem 0.5rem 3rem 0.5rem;
         display: grid;
         grid-template-areas:
             "image"
